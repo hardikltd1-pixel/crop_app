@@ -110,7 +110,7 @@ function App() {
   const insightsRef = useRef(null);
 
   useEffect(() => {
-    fetch("https://crop-app-jhi8.onrender.com/hotspots")
+    fetch("https://crop-app-p09n.onrender.com/hotspots")
       .then((r) => r.json())
       .then(setInsights)
       .catch(() => setInsights([]));
@@ -133,7 +133,7 @@ function App() {
     formData.append("district", district);
     formData.append("crop", crop);
     try {
-      const res = await fetch("https://crop-app-jhi8.onrender.com/analyze", { method: "POST", body: formData });
+      const res = await fetch("https://crop-app-p09n.onrender.com/analyze", { method: "POST", body: formData });
       const data = await res.json();
       if (!res.ok || data.error) {
         showToast(data.error || `Server error (${res.status}). Try again.`);
@@ -337,7 +337,7 @@ function App() {
         <div style={S.body}>Farmer-submitted reports plotted across Maharashtra, alongside a national comparison. Demo data for this prototype.</div>
         <div style={{ display: "grid", gridTemplateColumns: "1.3fr 1fr", gap: 28 }}>
           <iframe
-            src="https://garvitwork.github.io/crop_app/hotspot_map.html"
+            src="https://hardikltd1-pixel.github.io/crop_app/hotspot_map.html"
             title="Hotspot Map"
             style={{ width: "100%", height: 420, border: `1px solid ${C.line}`, borderRadius: 8, boxShadow: S.glowBox.boxShadow }}
           />
