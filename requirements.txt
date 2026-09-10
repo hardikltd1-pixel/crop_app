@@ -1,0 +1,11 @@
+tensorflow
+numpy
+requests
+folium
+genai
+google-genai
+fastapi
+uvicorn
+dotenv
+python-multipart
+Pillow
