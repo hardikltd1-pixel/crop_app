@@ -16,7 +16,7 @@ sensor_mod = import_module("5_pest_traps_sensor")
 app = FastAPI()
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
 
-MIN_CONFIDENCE = 0.35  # below this, treat the image as not a valid crop/leaf photo
+MIN_CONFIDENCE = 0.50  # below this, treat the image as not a valid crop/leaf photo
 
 SCAN_LOG = []          # in-memory log of real farmer submissions, most recent first
 MAX_LOG = 50
